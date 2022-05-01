@@ -1,12 +1,14 @@
 import React from "react";
 import { auth } from '../firebase';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Link } from 'react-router-dom'
 
 const Login = () => {
+    const auth = getAuth();
     const handleSubmit = (event) => {
         event.preventDefault();
         const { email, password } = event.target.elements;
-        auth.signInWithEmailAndPassword(email.value, password.value);
+        signInWithEmailAndPassword(auth, email.value, password.value);
     };
     return (
         <div>
