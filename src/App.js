@@ -1,6 +1,8 @@
+// import './App.css';
 import Home from './Components/Home';
 import SignUp from './Components/SignUp';
 import Login from './Components/Login';
+import Todo from './Components/Todo';
 import { AuthProvider } from './Context/authContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PrivateRoute from './Components/PrivateRoute';
